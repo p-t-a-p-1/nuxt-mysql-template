@@ -1,0 +1,32 @@
+version: '3.8'
+
+# 各コンテナの設定
+services:
+  # Nuxt.jsコンテナ
+  nuxt:
+    build: ./docker/nuxt
+    ports:
+      - '3000:3000'
+    # コンテナ常に起動
+    tty: true
+    # コンテナ起動時に実行するコマンド（Nuxtの開発モード起動）
+    command: npm run dev
+    # ローカルとコンテナのファイル共有
+    volumes:
+      - ./src:/usr/src/app
+  # MySQLコンテナ
+  db:
+    image: mysql:5.7
+    ports:
+      - '33066:3306'
+    # 接続情報
+    environment:
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: hoge
+      MYSQL_ROOT_PASSWORD: root
+      TZ: 'Asia/Tokyo'
+    volumes:
+      # mysqlの初期設定を反映
+      - ./docker/mysql/conf.d:/etc/mysql/conf.d
+      - ./docker/mysql/log/mysql:/var/log/mysql
