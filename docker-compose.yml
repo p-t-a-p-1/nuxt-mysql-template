@@ -10,10 +10,10 @@ services:
     # コンテナ常に起動
     tty: true
     # コンテナ起動時に実行するコマンド（Nuxtの開発モード起動）
-    command: npm run dev
+    #command: npm run dev
     # ローカルとコンテナのファイル共有
     volumes:
-      - ./src:/usr/src/app
+      - ./src:/usr/src
   # MySQLコンテナ
   db:
     image: mysql:5.7
