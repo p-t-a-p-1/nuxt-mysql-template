@@ -105,3 +105,12 @@ module.exports = {
 
 ![スクリーンショット 2020-09-07 22 26 06](https://user-images.githubusercontent.com/51960141/92396268-b93a1500-f15f-11ea-879d-e0d636e4f5d3.png)
 
+
+### Integration of Nuxt.js and MySQL
+
+Editing...
+
+
+
+
+
