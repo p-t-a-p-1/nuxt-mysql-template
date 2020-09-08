@@ -84,7 +84,7 @@ create-nuxt-app v2.15.0
 ```nuxt.confid.js
 module.exports = {
   mode: 'universal',
-  // ポートとホストの設定
+  // this
   server: {
     port: 3000,
     host: '0.0.0.0',
