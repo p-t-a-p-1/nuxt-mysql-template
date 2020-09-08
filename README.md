@@ -1,6 +1,11 @@
-# nuxt-mysql-template
+# Building a Nuxt.js and MySQL environment with Docker
 
-# usage
+Technologies:
+* Docker(Docker-compose)
+* Nuxt.js(Vue.js + Express.js)
+* MySQL:5.7
+
+## Getting Started
 
 ```bash
 
